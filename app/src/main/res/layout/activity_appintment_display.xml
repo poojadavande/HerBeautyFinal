@@ -1,0 +1,38 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/service_name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Service Name"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/price_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/category_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/appointment_details_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appointment Details"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services' // Firebase plugin
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.example.herbeauty'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.example.herbeauty"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    // Firebase Bill of Materials (BOM) to manage Firebase dependencies
+    implementation platform('com.google.firebase:firebase-bom:32.0.0')
+
+    // Firebase dependencies
+    implementation 'com.google.firebase:firebase-database' // Firebase Realtime Database
+    implementation 'com.google.firebase:firebase-storage' // Firebase Storage
+    implementation 'com.google.firebase:firebase-auth'     // Firebase Authentication (optional)
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    implementation 'com.github.bumptech.glide:gifdecoder:4.13.2'
+    // AndroidX dependencies
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.core:core-ktx:+' // Core KTX library for Kotlin extensions
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.8.4' // Navigation components
+    implementation 'androidx.navigation:navigation-ui-ktx:2.8.4' // Navigation UI components
+
+    // Testing dependencies
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // Responsive Screen
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+    // Other dependencies can be added here
+}
